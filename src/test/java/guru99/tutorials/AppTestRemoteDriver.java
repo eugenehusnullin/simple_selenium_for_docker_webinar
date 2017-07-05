@@ -18,13 +18,13 @@ public class AppTestRemoteDriver {
     public void simpleTest() {
         WebDriver driver = null;
         try {
-            driver = new RemoteWebDriver(new URL("http://localhost:32768/wd/hub"),
-                    DesiredCapabilities.firefox());
+            driver = new RemoteWebDriver(new URL("http://192.168.56.1:32768/wd/hub"),
+                    DesiredCapabilities.chrome());
         } catch (MalformedURLException e) {
             e.printStackTrace();
         }
 
-        String eTitle = "Meet Guru99";
+        String eTitle = "Meet Guru99 - Free Training Tutorials & Video for IT Courses";
         String aTitle = "";
 
         // запустить firefox и перейти по адресу
